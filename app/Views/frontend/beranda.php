@@ -6,7 +6,7 @@
 <section class="bg-white border-b border-hair text-ink">
   <div class="max-w-6xl mx-auto px-5 pt-14 pb-16">
     <div class="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-signal font-semibold mb-6">
-      Sinyal Hari Ini
+      Berita Hari Ini
     </div>
 
     <?php if ($headline): ?>

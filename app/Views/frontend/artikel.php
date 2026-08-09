@@ -46,9 +46,9 @@
   <aside class="space-y-8">
     <form action="<?= site_url('artikel') ?>" method="get" class="bg-card border border-hair rounded-xl p-5">
       <label class="font-mono text-[11px] uppercase tracking-widest text-muted block mb-2">Cari Artikel</label>
-      <div class="flex gap-2">
-        <input type="text" name="q" value="<?= esc($keyword ?? '') ?>" placeholder="Kata kunci..." class="flex-1 border border-hair rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-signal">
-        <button class="bg-signal text-white rounded-lg px-3.5 text-sm font-semibold hover:bg-signal/90">Cari</button>
+      <div class="flex gap-3 w-full">
+        <input type="text" name="q" value="<?= esc($keyword ?? '') ?>" placeholder="Kata kunci..." class="min-w-0 flex-1 h-12 border border-hair rounded-lg px-3 text-sm outline-none focus:ring-2 focus:ring-signal">
+        <button class="shrink-0 h-12 px-5 bg-signal text-white rounded-lg text-sm font-semibold">Cari</button>
       </div>
     </form>
 
