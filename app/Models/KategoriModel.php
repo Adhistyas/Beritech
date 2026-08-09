@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class CategoryModel extends Model
+class KategoriModel extends Model
 {
     protected $table            = 'categories';
     protected $primaryKey       = 'id';

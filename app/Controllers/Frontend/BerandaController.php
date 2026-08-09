@@ -3,18 +3,18 @@
 namespace App\Controllers\Frontend;
 
 use App\Controllers\BaseController;
-use App\Models\ArticleModel;
-use App\Models\CategoryModel;
+use App\Models\ArtikelModel;
+use App\Models\KategoriModel;
 
-class HomeController extends BaseController
+class BerandaController extends BaseController
 {
-    protected ArticleModel $articleModel;
-    protected CategoryModel $categoryModel;
+    protected ArtikelModel $articleModel;
+    protected KategoriModel $categoryModel;
 
     public function __construct()
     {
-        $this->articleModel  = new ArticleModel();
-        $this->categoryModel = new CategoryModel();
+        $this->articleModel  = new ArtikelModel();
+        $this->categoryModel = new KategoriModel();
     }
 
     public function index()
@@ -28,7 +28,7 @@ class HomeController extends BaseController
             'categories' => $this->categoryModel->orderBy('name', 'ASC')->findAll(),
         ];
 
-        return view('frontend/home', $data);
+        return view('frontend/beranda', $data);
     }
 
     public function articles()
@@ -55,12 +55,12 @@ class HomeController extends BaseController
             'categoryId' => $categoryId,
         ];
 
-        return view('frontend/articles', $data);
+        return view('frontend/artikel', $data);
     }
 
     public function about()
     {
-        return view('frontend/about', [
+        return view('frontend/tentang', [
             'title'      => 'Tentang',
             'categories' => $this->categoryModel->orderBy('name', 'ASC')->findAll(),
         ]);

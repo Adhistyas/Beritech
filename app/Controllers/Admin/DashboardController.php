@@ -3,15 +3,15 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
-use App\Models\ArticleModel;
-use App\Models\CategoryModel;
+use App\Models\ArtikelModel;
+use App\Models\KategoriModel;
 
 class DashboardController extends BaseController
 {
     public function index()
     {
-        $articleModel  = new ArticleModel();
-        $categoryModel = new CategoryModel();
+        $articleModel  = new ArtikelModel();
+        $categoryModel = new KategoriModel();
 
         $data = [
             'title'           => 'Dashboard',

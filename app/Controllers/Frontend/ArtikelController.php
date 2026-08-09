@@ -3,16 +3,16 @@
 namespace App\Controllers\Frontend;
 
 use App\Controllers\BaseController;
-use App\Models\ArticleModel;
-use App\Models\CategoryModel;
+use App\Models\ArtikelModel;
+use App\Models\KategoriModel;
 use CodeIgniter\Exceptions\PageNotFoundException;
 
-class ArticleController extends BaseController
+class ArtikelController extends BaseController
 {
     public function detail($slug)
     {
-        $articleModel  = new ArticleModel();
-        $categoryModel = new CategoryModel();
+        $articleModel  = new ArtikelModel();
+        $categoryModel = new KategoriModel();
 
         $article = $articleModel->findBySlug($slug);
 

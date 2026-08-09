@@ -1,19 +1,20 @@
 <?php
 
 namespace App\Controllers\Admin;
-use App\Controllers\BaseController;
-use App\Models\ArticleModel;
-use App\Models\CategoryModel;
 
-class ArticleController extends BaseController
+use App\Controllers\BaseController;
+use App\Models\ArtikelModel;
+use App\Models\KategoriModel;
+
+class ArtikelController extends BaseController
 {
-    protected ArticleModel $articleModel;
-    protected CategoryModel $categoryModel;
+    protected ArtikelModel $articleModel;
+    protected KategoriModel $categoryModel;
 
     public function __construct()
     {
-        $this->articleModel  = new ArticleModel();
-        $this->categoryModel = new CategoryModel();
+        $this->articleModel  = new ArtikelModel();
+        $this->categoryModel = new KategoriModel();
     }
 
     public function index()

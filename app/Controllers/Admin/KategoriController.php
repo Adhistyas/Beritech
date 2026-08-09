@@ -3,15 +3,15 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
-use App\Models\CategoryModel;
+use App\Models\KategoriModel;
 
-class CategoryController extends BaseController
+class KategoriController extends BaseController
 {
-    protected CategoryModel $categoryModel;
+    protected KategoriModel $categoryModel;
 
     public function __construct()
     {
-        $this->categoryModel = new CategoryModel();
+        $this->categoryModel = new KategoriModel();
     }
 
     public function index()
@@ -21,12 +21,12 @@ class CategoryController extends BaseController
             'categories' => $this->categoryModel->withArticleCount()->orderBy('categories.name', 'ASC')->findAll(),
         ];
 
-        return view('admin/categories/index', $data);
+        return view('admin/kategori/index', $data);
     }
 
     public function create()
     {
-        return view('admin/categories/form', ['title' => 'Tambah Kategori', 'category' => null]);
+        return view('admin/kategori/form', ['title' => 'Tambah Kategori', 'category' => null]);
     }
 
     public function store()
@@ -61,7 +61,7 @@ class CategoryController extends BaseController
             return redirect()->to('/admin/categories')->with('error', 'Kategori tidak ditemukan.');
         }
 
-        return view('admin/categories/form', ['title' => 'Edit Kategori', 'category' => $category]);
+        return view('admin/kategori/form', ['title' => 'Edit Kategori', 'category' => $category]);
     }
 
     public function update($id)

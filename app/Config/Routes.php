@@ -9,19 +9,19 @@ use CodeIgniter\Router\RouteCollection;
 // -----------------------------------------------------------------
 // FRONTEND (Pengunjung)
 // -----------------------------------------------------------------
-$routes->get('/', 'Frontend\HomeController::index');
-$routes->get('artikel', 'Frontend\HomeController::articles');
-$routes->get('artikel/(:segment)', 'Frontend\ArticleController::detail/$1');
-$routes->get('tentang', 'Frontend\HomeController::about');
+$routes->get('/', 'Frontend\BerandaController::index');
+$routes->get('artikel', 'Frontend\BerandaController::articles');
+$routes->get('artikel/(:segment)', 'Frontend\ArtikelController::detail/$1');
+$routes->get('tentang', 'Frontend\BerandaController::about');
 
 // -----------------------------------------------------------------
 // ADMIN (Backend)
 // -----------------------------------------------------------------
 $routes->group('admin', static function (RouteCollection $routes) {
     // Auth (tidak perlu login)
-    $routes->get('login', 'Admin\AuthController::login');
-    $routes->post('login', 'Admin\AuthController::attemptLogin');
-    $routes->get('logout', 'Admin\AuthController::logout');
+    $routes->get('login', 'Admin\AutentikasiController::login');
+    $routes->post('login', 'Admin\AutentikasiController::attemptLogin');
+    $routes->get('logout', 'Admin\AutentikasiController::logout');
 
     // Area yang wajib login, dilindungi oleh filter 'adminauth'
     $routes->group('', ['filter' => 'adminauth'], static function (RouteCollection $routes) {
@@ -29,19 +29,19 @@ $routes->group('admin', static function (RouteCollection $routes) {
         $routes->get('dashboard', 'Admin\DashboardController::index');
 
         // Manajemen Artikel
-        $routes->get('articles', 'Admin\ArticleController::index');
-        $routes->get('articles/create', 'Admin\ArticleController::create');
-        $routes->post('articles/store', 'Admin\ArticleController::store');
-        $routes->get('articles/edit/(:num)', 'Admin\ArticleController::edit/$1');
-        $routes->post('articles/update/(:num)', 'Admin\ArticleController::update/$1');
-        $routes->get('articles/delete/(:num)', 'Admin\ArticleController::delete/$1');
+        $routes->get('articles', 'Admin\ArtikelController::index');
+        $routes->get('articles/create', 'Admin\ArtikelController::create');
+        $routes->post('articles/store', 'Admin\ArtikelController::store');
+        $routes->get('articles/edit/(:num)', 'Admin\ArtikelController::edit/$1');
+        $routes->post('articles/update/(:num)', 'Admin\ArtikelController::update/$1');
+        $routes->get('articles/delete/(:num)', 'Admin\ArtikelController::delete/$1');
 
         // Manajemen Kategori
-        $routes->get('categories', 'Admin\CategoryController::index');
-        $routes->get('categories/create', 'Admin\CategoryController::create');
-        $routes->post('categories/store', 'Admin\CategoryController::store');
-        $routes->get('categories/edit/(:num)', 'Admin\CategoryController::edit/$1');
-        $routes->post('categories/update/(:num)', 'Admin\CategoryController::update/$1');
-        $routes->get('categories/delete/(:num)', 'Admin\CategoryController::delete/$1');
+        $routes->get('categories', 'Admin\KategoriController::index');
+        $routes->get('categories/create', 'Admin\KategoriController::create');
+        $routes->post('categories/store', 'Admin\KategoriController::store');
+        $routes->get('categories/edit/(:num)', 'Admin\KategoriController::edit/$1');
+        $routes->post('categories/update/(:num)', 'Admin\KategoriController::update/$1');
+        $routes->get('categories/delete/(:num)', 'Admin\KategoriController::delete/$1');
     });
 });
