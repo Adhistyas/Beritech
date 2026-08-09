@@ -1,0 +1,72 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.nav-link.active {
+  background: rgba(54, 82, 255, .1);
+  color: #3652FF;
+  font-weight: 600;
+}
+
+.pulse-line span {
+  display: block;
+  width: 4px;
+  background: currentColor;
+  border-radius: 2px;
+  animation: beat 1.6s ease-in-out infinite;
+}
+
+.pulse-line span:nth-child(1) {
+  height: 8px;
+  animation-delay: 0s;
+}
+
+.pulse-line span:nth-child(2) {
+  height: 18px;
+  animation-delay: .12s;
+}
+
+.pulse-line span:nth-child(3) {
+  height: 12px;
+  animation-delay: .24s;
+}
+
+.pulse-line span:nth-child(4) {
+  height: 24px;
+  animation-delay: .36s;
+}
+
+.pulse-line span:nth-child(5) {
+  height: 10px;
+  animation-delay: .48s;
+}
+
+@keyframes beat {
+
+  0%,
+  100% {
+    transform: scaleY(.5);
+    opacity: .5;
+  }
+
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-line span {
+    animation: none;
+    transform: none;
+    opacity: 1;
+  }
+}

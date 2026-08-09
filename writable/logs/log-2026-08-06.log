@@ -1,0 +1,746 @@
+ERROR - 2026-08-06 10:46:05 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MigrationRunner.php(173): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Commands/Database/Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Commands/Database/Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\Migrate->run(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(444): CodeIgniter\CLI\Console->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#14 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MigrationRunner.php(173): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Commands/Database/Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Commands/Database/Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(444): CodeIgniter\CLI\Console->run()
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#13 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-08-06 10:50:32 --> ErrorException: Attempt to read property "filters" on null
+[Method: GET, Route: /]
+in SYSTEMPATH/Filters/Filters.php on line 765.
+ 1 SYSTEMPATH/Filters/Filters.php(765): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "filters" on null', '/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Filters/Filters.php', 765)
+ 2 SYSTEMPATH/Filters/Filters.php(474): CodeIgniter\Filters\Filters->processFilters('')
+ 3 SYSTEMPATH/Filters/Filters.php(218): CodeIgniter\Filters\Filters->initialize('')
+ 4 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('', 'before')
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php')
+CRITICAL - 2026-08-06 10:50:48 --> ErrorException: Attempt to read property "filters" on null
+[Method: GET, Route: /]
+in SYSTEMPATH/Filters/Filters.php on line 765.
+ 1 SYSTEMPATH/Filters/Filters.php(765): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "filters" on null', '/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Filters/Filters.php', 765)
+ 2 SYSTEMPATH/Filters/Filters.php(474): CodeIgniter\Filters\Filters->processFilters('')
+ 3 SYSTEMPATH/Filters/Filters.php(218): CodeIgniter\Filters\Filters->initialize('')
+ 4 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('', 'before')
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php')
+CRITICAL - 2026-08-06 10:51:21 --> ErrorException: Attempt to read property "filters" on null
+[Method: GET, Route: admin/login]
+in SYSTEMPATH/Filters/Filters.php on line 765.
+ 1 SYSTEMPATH/Filters/Filters.php(765): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "filters" on null', '/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Filters/Filters.php', 765)
+ 2 SYSTEMPATH/Filters/Filters.php(474): CodeIgniter\Filters\Filters->processFilters('admin/login')
+ 3 SYSTEMPATH/Filters/Filters.php(218): CodeIgniter\Filters\Filters->initialize('admin/login')
+ 4 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('admin/login', 'before')
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php')
+CRITICAL - 2026-08-06 10:51:54 --> ErrorException: Attempt to read property "filters" on null
+[Method: GET, Route: admin/login]
+in SYSTEMPATH/Filters/Filters.php on line 765.
+ 1 SYSTEMPATH/Filters/Filters.php(765): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "filters" on null', '/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Filters/Filters.php', 765)
+ 2 SYSTEMPATH/Filters/Filters.php(474): CodeIgniter\Filters\Filters->processFilters('admin/login')
+ 3 SYSTEMPATH/Filters/Filters.php(218): CodeIgniter\Filters\Filters->initialize('admin/login')
+ 4 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('admin/login', 'before')
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php')
+CRITICAL - 2026-08-06 10:51:56 --> ErrorException: Attempt to read property "filters" on null
+[Method: GET, Route: admin/login]
+in SYSTEMPATH/Filters/Filters.php on line 765.
+ 1 SYSTEMPATH/Filters/Filters.php(765): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "filters" on null', '/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Filters/Filters.php', 765)
+ 2 SYSTEMPATH/Filters/Filters.php(474): CodeIgniter\Filters\Filters->processFilters('admin/login')
+ 3 SYSTEMPATH/Filters/Filters.php(218): CodeIgniter\Filters\Filters->initialize('admin/login')
+ 4 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('admin/login', 'before')
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php')
+CRITICAL - 2026-08-06 10:51:57 --> ErrorException: Attempt to read property "filters" on null
+[Method: GET, Route: admin/login]
+in SYSTEMPATH/Filters/Filters.php on line 765.
+ 1 SYSTEMPATH/Filters/Filters.php(765): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "filters" on null', '/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Filters/Filters.php', 765)
+ 2 SYSTEMPATH/Filters/Filters.php(474): CodeIgniter\Filters\Filters->processFilters('admin/login')
+ 3 SYSTEMPATH/Filters/Filters.php(218): CodeIgniter\Filters\Filters->initialize('admin/login')
+ 4 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('admin/login', 'before')
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php')
+CRITICAL - 2026-08-06 10:51:58 --> ErrorException: Attempt to read property "filters" on null
+[Method: GET, Route: admin/login]
+in SYSTEMPATH/Filters/Filters.php on line 765.
+ 1 SYSTEMPATH/Filters/Filters.php(765): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "filters" on null', '/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Filters/Filters.php', 765)
+ 2 SYSTEMPATH/Filters/Filters.php(474): CodeIgniter\Filters\Filters->processFilters('admin/login')
+ 3 SYSTEMPATH/Filters/Filters.php(218): CodeIgniter\Filters\Filters->initialize('admin/login')
+ 4 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('admin/login', 'before')
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php')
+ERROR - 2026-08-06 10:55:24 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `article...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/BaseModel.php(615): CodeIgniter\Model->doFind(false, NULL)
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/rewrite.php(44): require_once('/Applications/X...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `article...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/BaseModel.php(615): CodeIgniter\Model->doFind(false, NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/rewrite.php(44): require_once('/Applications/X...')
+#13 {main}
+CRITICAL - 2026-08-06 10:55:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `articles`.*, `categories`.`name` as `category_name`, `categories`.`slug` as `category_slug`
+FROM `articles`
+LEFT JOIN `categories` ON `categories`.`id` = `articles`.`category_id`
+WHERE `articles`.`status` = :articles.status:
+ORDER BY `articles`.`published_at` DESC
+ LIMIT 7', [...], false)
+ 3 SYSTEMPATH/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php')
+ERROR - 2026-08-06 10:56:01 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Models/UserModel.php(22): CodeIgniter\BaseModel->first()
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Controllers/Admin/AuthController.php(31): App\Models\UserModel->findByUsername('admin')
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(974): App\Controllers\Admin\AuthController->attemptLogin()
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AuthController))
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/rewrite.php(44): require_once('/Applications/X...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Models/UserModel.php(22): CodeIgniter\BaseModel->first()
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Controllers/Admin/AuthController.php(31): App\Models\UserModel->findByUsername('admin')
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(974): App\Controllers\Admin\AuthController->attemptLogin()
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AuthController))
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/rewrite.php(44): require_once('/Applications/X...')
+#14 {main}
+CRITICAL - 2026-08-06 10:56:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: POST, Route: admin/login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UserModel.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/Admin/AuthController.php(31): App\Models\UserModel->findByUsername('admin')
+ 7 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Admin\AuthController->attemptLogin()
+ 8 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AuthController))
+ 9 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php')
+ERROR - 2026-08-06 10:56:30 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `article...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/BaseModel.php(615): CodeIgniter\Model->doFind(false, NULL)
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/rewrite.php(44): require_once('/Applications/X...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `article...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/BaseModel.php(615): CodeIgniter\Model->doFind(false, NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/rewrite.php(44): require_once('/Applications/X...')
+#13 {main}
+CRITICAL - 2026-08-06 10:56:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `articles`.*, `categories`.`name` as `category_name`, `categories`.`slug` as `category_slug`
+FROM `articles`
+LEFT JOIN `categories` ON `categories`.`id` = `articles`.`category_id`
+WHERE `articles`.`status` = :articles.status:
+ORDER BY `articles`.`published_at` DESC
+ LIMIT 7', [...], false)
+ 3 SYSTEMPATH/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php')
+ERROR - 2026-08-06 10:56:35 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `article...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/BaseModel.php(615): CodeIgniter\Model->doFind(false, NULL)
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/rewrite.php(44): require_once('/Applications/X...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `article...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/BaseModel.php(615): CodeIgniter\Model->doFind(false, NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/rewrite.php(44): require_once('/Applications/X...')
+#13 {main}
+CRITICAL - 2026-08-06 10:56:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `articles`.*, `categories`.`name` as `category_name`, `categories`.`slug` as `category_slug`
+FROM `articles`
+LEFT JOIN `categories` ON `categories`.`id` = `articles`.`category_id`
+WHERE `articles`.`status` = :articles.status:
+ORDER BY `articles`.`published_at` DESC
+ LIMIT 7', [...], false)
+ 3 SYSTEMPATH/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php')
+ERROR - 2026-08-06 10:56:39 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `article...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/BaseModel.php(615): CodeIgniter\Model->doFind(false, NULL)
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/rewrite.php(44): require_once('/Applications/X...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `article...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/BaseModel.php(615): CodeIgniter\Model->doFind(false, NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/rewrite.php(44): require_once('/Applications/X...')
+#13 {main}
+CRITICAL - 2026-08-06 10:56:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `articles`.*, `categories`.`name` as `category_name`, `categories`.`slug` as `category_slug`
+FROM `articles`
+LEFT JOIN `categories` ON `categories`.`id` = `articles`.`category_id`
+WHERE `articles`.`status` = :articles.status:
+ORDER BY `articles`.`published_at` DESC
+ LIMIT 7', [...], false)
+ 3 SYSTEMPATH/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php')
+ERROR - 2026-08-06 10:57:55 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'tekpulsa', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `article...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/BaseModel.php(615): CodeIgniter\Model->doFind(false, NULL)
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/rewrite.php(44): require_once('/Applications/X...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `article...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/BaseModel.php(615): CodeIgniter\Model->doFind(false, NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/rewrite.php(44): require_once('/Applications/X...')
+#13 {main}
+CRITICAL - 2026-08-06 10:57:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `articles`.*, `categories`.`name` as `category_name`, `categories`.`slug` as `category_slug`
+FROM `articles`
+LEFT JOIN `categories` ON `categories`.`id` = `articles`.`category_id`
+WHERE `articles`.`status` = :articles.status:
+ORDER BY `articles`.`published_at` DESC
+ LIMIT 7', [...], false)
+ 3 SYSTEMPATH/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php')
+ERROR - 2026-08-06 10:58:00 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'tekpulsa', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `article...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/BaseModel.php(615): CodeIgniter\Model->doFind(false, NULL)
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/rewrite.php(44): require_once('/Applications/X...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `article...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/BaseModel.php(615): CodeIgniter\Model->doFind(false, NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/rewrite.php(44): require_once('/Applications/X...')
+#13 {main}
+CRITICAL - 2026-08-06 10:58:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `articles`.*, `categories`.`name` as `category_name`, `categories`.`slug` as `category_slug`
+FROM `articles`
+LEFT JOIN `categories` ON `categories`.`id` = `articles`.`category_id`
+WHERE `articles`.`status` = :articles.status:
+ORDER BY `articles`.`published_at` DESC
+ LIMIT 7', [...], false)
+ 3 SYSTEMPATH/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php')
+DEBUG - 2026-08-06 10:58:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-08-06 10:58:42 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'tekpulsa', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Models/UserModel.php(22): CodeIgniter\BaseModel->first()
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Controllers/Admin/AuthController.php(31): App\Models\UserModel->findByUsername('admin')
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(974): App\Controllers\Admin\AuthController->attemptLogin()
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AuthController))
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/rewrite.php(44): require_once('/Applications/X...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Models/UserModel.php(22): CodeIgniter\BaseModel->first()
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Controllers/Admin/AuthController.php(31): App\Models\UserModel->findByUsername('admin')
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(974): App\Controllers\Admin\AuthController->attemptLogin()
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AuthController))
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/rewrite.php(44): require_once('/Applications/X...')
+#14 {main}
+CRITICAL - 2026-08-06 10:58:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: POST, Route: admin/login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UserModel.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/Admin/AuthController.php(31): App\Models\UserModel->findByUsername('admin')
+ 7 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Admin\AuthController->attemptLogin()
+ 8 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AuthController))
+ 9 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php')
+ERROR - 2026-08-06 10:59:36 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'tekpulsa', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Models/UserModel.php(22): CodeIgniter\BaseModel->first()
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Controllers/Admin/AuthController.php(31): App\Models\UserModel->findByUsername('admin')
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(974): App\Controllers\Admin\AuthController->attemptLogin()
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AuthController))
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/rewrite.php(44): require_once('/Applications/X...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Models/UserModel.php(22): CodeIgniter\BaseModel->first()
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Controllers/Admin/AuthController.php(31): App\Models\UserModel->findByUsername('admin')
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(974): App\Controllers\Admin\AuthController->attemptLogin()
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AuthController))
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/rewrite.php(44): require_once('/Applications/X...')
+#14 {main}
+CRITICAL - 2026-08-06 10:59:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: POST, Route: admin/login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UserModel.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/Admin/AuthController.php(31): App\Models\UserModel->findByUsername('admin')
+ 7 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Admin\AuthController->attemptLogin()
+ 8 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AuthController))
+ 9 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php')
+DEBUG - 2026-08-06 10:59:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-08-06 10:59:43 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'tekpulsa', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `article...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/BaseModel.php(615): CodeIgniter\Model->doFind(false, NULL)
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/rewrite.php(44): require_once('/Applications/X...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `article...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/BaseModel.php(615): CodeIgniter\Model->doFind(false, NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/app/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+#6 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+#7 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+#8 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/system/rewrite.php(44): require_once('/Applications/X...')
+#13 {main}
+CRITICAL - 2026-08-06 10:59:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `articles`.*, `categories`.`name` as `category_name`, `categories`.`slug` as `category_slug`
+FROM `articles`
+LEFT JOIN `categories` ON `categories`.`id` = `articles`.`category_id`
+WHERE `articles`.`status` = :articles.status:
+ORDER BY `articles`.`published_at` DESC
+ LIMIT 7', [...], false)
+ 3 SYSTEMPATH/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH/Controllers/Frontend/HomeController.php(22): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Frontend\HomeController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\HomeController))
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/UASWEB2_Bagas Aditiya/public/index.php')
+DEBUG - 2026-08-06 11:04:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:04:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:04:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:04:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:04:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:04:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:04:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:04:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:05:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:05:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:06:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:07:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:07:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:11:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:11:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:23:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:23:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:23:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:23:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:23:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:23:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:23:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:24:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:24:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:24:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:28:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:28:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:28:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:28:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:28:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:28:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:29:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:29:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:29:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:36:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:36:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:36:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:36:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:36:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:40:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:40:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:40:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:44:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:44:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:44:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:44:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:44:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:44:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:45:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:46:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:51:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:57:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-06 11:57:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
