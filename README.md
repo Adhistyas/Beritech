@@ -4,7 +4,7 @@
 
 ---
 
-## 📋 Daftar Isi
+## Daftar Isi
 
 - [Tentang Project](#-tentang-project)
 - [Fitur Utama](#-fitur-utama)
@@ -18,7 +18,7 @@
 
 ---
 
-## 📖 Tentang Project
+## Tentang Project
 
 **Beritech** adalah aplikasi portal berita yang berfokus pada konten teknologi. Project ini dikembangkan sebagai UAS (Ujian Akhir Semester) mata kuliah Pemrograman Web 2. Aplikasi ini memiliki dua sisi utama:
 
@@ -43,7 +43,7 @@
   - Upload gambar artikel
   - Auto-generate slug unik dari judul
   - Status artikel: `draft` / `published`
-  - Rich text editor untuk konten (HTML)
+  - Rich text editor untuk konten (HTML) menggunakan summernote
 - CRUD Kategori
 - Filter autentikasi (`adminauth`) untuk proteksi rute admin
 
@@ -132,8 +132,7 @@ Ikuti langkah-langkah berikut secara berurutan.
 ### Prasyarat
 
 Pastikan perangkat sudah terpasang:
-- **PHP** versi 8.2 atau lebih baru (dengan ekstensi `intl`, `mbstring`, `mysqli`)
-- **Composer** ([getcomposer.org](https://getcomposer.org/))
+- **PHP** versi 8.2 atau lebih baru
 - **MySQL** atau **MariaDB**
 - **Git**
 - *(Opsional)* **XAMPP** sebagai all-in-one stack untuk development lokal
@@ -143,8 +142,8 @@ Pastikan perangkat sudah terpasang:
 ### Langkah 1 — Clone Repository
 
 ```bash
-git clone https://github.com/<username>/UASWEB2_Bagas-Aditiya.git
-cd "UASWEB2_Bagas Aditiya"
+git clone https://github.com/<username>/Beritech.git
+cd "Beritech"
 ```
 
 > Ganti `<username>` dengan username GitHub yang sesuai.
@@ -165,25 +164,24 @@ composer install
 cp .env.example .env
 ```
 
-Kemudian edit file `.env` sesuai konfigurasi lokal (lihat bagian [Konfigurasi Environment](#-konfigurasi-environment) di bawah).
+Kemudian edit file `.env` sesuai konfigurasi berikut
 
----
-
-### Langkah 4 — Buat Database
-
-Buka **phpMyAdmin** atau MySQL CLI, lalu buat database baru:
-
-```sql
-CREATE DATABASE IF NOT EXISTS beritech
-  DEFAULT CHARACTER SET utf8mb4
-  COLLATE utf8mb4_general_ci;
+```env
+CI_ENVIRONMENT = development
+app.baseURL = 'http://localhost:8080/'
+database.default.hostname = 127.0.0.1
+database.default.database = beritech
+database.default.username = root
+database.default.password =
+database.default.DBDriver = MySQLi
+database.default.port = 3306
 ```
 
 ---
 
-### Langkah 5 — Import Database
+### Langkah 4 — Import Database
 
-Import file SQL yang tersedia. File ini sudah berisi skema tabel lengkap beserta data awal (artikel contoh, kategori, dan akun admin).
+Import file SQL yang tersedia. File ini sudah berisi skema pembuatan database, tabel lengkap beserta data awal (artikel contoh, kategori, dan akun admin).
 
 **Melalui phpMyAdmin:**
 1. Buka `http://localhost/phpmyadmin`
@@ -199,18 +197,7 @@ mysql -u root -p beritech < app/Database/UAS_WEB2_fix.sql
 
 ---
 
-### Langkah 6 — Atur Izin Direktori
-
-*(Untuk pengguna Linux/macOS)*
-
-```bash
-chmod -R 775 writable/
-chmod -R 775 public/uploads/
-```
-
----
-
-### Langkah 7 — Jalankan Server Development
+### Langkah 5 — Jalankan Server Development
 
 ```bash
 php spark serve
