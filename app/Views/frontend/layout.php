@@ -71,7 +71,7 @@
       <div class="flex items-center gap-2.5 mb-3">
         <span class="font-display text-lg font-bold text-ink">Beri<span class="text-signal">Tech</span></span>
       </div>
-      <p class="text-sm leading-relaxed max-w-xs text-muted">Membaca detak teknologi Indonesia — gadget, aplikasi, kecerdasan buatan, hingga startup, dirangkum tiap hari.</p>
+      <p class="text-sm leading-relaxed max-w-xs text-muted">Membaca detak teknologi Indonesia - gadget, aplikasi, kecerdasan buatan, hingga startup, dirangkum tiap hari.</p>
     </div>
     <div>
       <p class="font-mono text-xs uppercase tracking-widest text-muted mb-3 font-semibold">Navigasi</p>
